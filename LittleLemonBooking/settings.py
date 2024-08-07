@@ -39,6 +39,9 @@ INSTALLED_APPS = [
     'django.contrib.staticfiles',
     'rest_framework',
     'Restaurant',
+    'rest_framework.authtoken',
+    'djoser',
+
     
 ]
 
@@ -158,4 +161,8 @@ REST_FRAMEWORK = {
         'user':'100/minute',
         'ten': '100/minute',
     },
+}
+
+DJOSER = {
+    "USER_ID_FIELD":"username"
 }
