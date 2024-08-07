@@ -41,29 +41,3 @@ class BookingViewSet(ModelViewSet):
     queryset = Booking.objects.all()
     serializer_class = BookingSerializer
     permission_classes = [permissions.IsAuthenticated]
-
-# class SingleBookingView(RetrieveUpdateAPIView, DestroyAPIView):
-#     queryset = Booking.objects.all()
-#     serializer_class = BookingSerializer
-
-# class bookingview(APIView):
-#     def get(self,request):
-#         items = Booking.objects.all()
-#         serializer = BookingSerializer(items, many = True)
-#         return Response(serializer.data, status=status.HTTP_200_OK)
-#     def post(self, request):
-#         serializer = BookingSerializer(data = request.data)
-#         if serializer.is_valid():
-#             serializer.save()
-#             return Response(serializer.data, status=status.HTTP_201_CREATED)     
-# class menuview(APIView):
-#     def get(self, request):
-#         items = Menu.objects.all()
-#         serializer = MenuSerializer(items, many = True)
-#         return Response(serializer.data, status=status.HTTP_200_OK)
-#     def post(self, request):
-#         serializer = MenuSerializer(data = request.data)
-#         if serializer.is_valid():
-#             serializer.save()
-#             return Response(serializer.data, status=status.HTTP_201_CREATED)
-       
